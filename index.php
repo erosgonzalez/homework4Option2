@@ -45,75 +45,6 @@
 		<title>Platformer</title>
 		<script src="myGameLibrary.js"></script>
 
-		<style type="text/css">
-			/*#gameWindow{*/
-			/*	position: relative;*/
-			/*	width: 800px;*/
-			/*	height: 400px;*/
-			/*	background-color: black;*/
-			/*	overflow: hidden;*/
-			/*}*/
-
-			/*#pc{*/
-			/*	position: absolute;*/
-			/*	border-radius: 10px;*/
-			/*	background-color: red;*/
-			/*}*/
-			/*.platform{*/
-			/*	position: absolute;*/
-			/*	background-color: orange;*/
-			/*	border-radius: 5px;*/
-			/*}*/
-			/*#npc_prince{*/
-			/*	position: absolute;*/
-			/*	border-radius: 10px;*/
-			/*	background-color: purple;*/
-			/*}*/
-			/*#btnContinue{*/
-			/*	position: absolute;*/
-			/*	left: 350px;*/
-			/*	top: 320px;*/
-				
-			/*	display: none;*/
-				
-			/*	background-color: rgba(255, 255, 255, .6);*/
-			/*	color: black;*/
-				
-			/*	padding: 20px;*/
-			/*	padding-top: 10px;*/
-			/*	padding-bottom: 10px;*/
-			/*	border-radius: 10px;*/
-				
-			/*	text-align: center;*/
-			/*	font-size: 14pt;*/
-				
-			/*	cursor: hand;*/
-			/*	cursor: pointer;*/
-				
-			/*	z-index: 10;*/
-			/*	-webkit-touch-callout: none;*/
-			/*	-webkit-user-select: none;*/
-			/*	-khtml-user-select: none;*/
-			/*	-moz-user-select: none;*/
-			/*	-ms-user-select: none;*/
-			/*	user-select: none;*/
-			/*}*/
-			/*#btnContinue:hover{*/
-			/*	background-color: rgba(255,255,255,.9);*/
-			/*}*/
-			/*.msgGameOver{*/
-			/*	font-size: 50pt;*/
-			/*	text-align: center;*/
-			/*	color: white;*/
-			/*}*/
-			/*#lifebar{*/
-			/*	position: absolute;*/
-			/*	width: 400px;*/
-			/*	left: 400px;*/
-			/*	text-align: right;*/
-			/*}*/
-		</style>
-
 		<script type="text/javascript">
 			var pc;
 			var npc_prince;
@@ -308,21 +239,6 @@
 					gameWindow.className = 'msgGameOver';
 				}
 			}
-			
-			
-
-			// document.addEventListener('keydown', function(event){
-			// 	if(event.keyCode==37) leftArrowDown = true;
-			// 	if(event.keyCode==39) rightArrowDown = true;
-			// 	if(event.keyCode==38) upArrowDown = true;
-			// });
-
-			// document.addEventListener('keyup', function(event){
-			// 	if(event.keyCode==37) leftArrowDown = false;
-			// 	if(event.keyCode==39) rightArrowDown = false;
-			// 	if(event.keyCode==38) upArrowDown = false;
-			// });
-			
 		</script>
 
 	</head>
@@ -337,7 +253,5 @@
 		<div id="output"></div>
 
 	</body>
-	
-
 	
 </html>
