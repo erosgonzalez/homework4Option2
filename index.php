@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html>
+	<!---Jquery starts---->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+		<script>$(document).ready(function(){
+			$('#btnContinue').click(function(){
+        		nextLevel();});
+        	});
+        </script>
+        	<script>$(document).ready(function(){
+        		output = document.getElementById('output');
+				output.innerHTML = level;
+				
+				lifebar =  document.getElementById('lifebar');
+				for (var i = 0; i < 3; i++) addLife();
+				
+
+				pc = document.getElementById('pc');
+				pc.style.width = '20px';
+				pc.style.height = '40px';
+				
+				npc_prince = document.getElementById('npc_prince');
+				npc_prince.style.width = '20px';
+				npc_prince.style.height = '40px';
+
+				nextLevel();});
+        	</script>
+        	<script>
+        		document.addEventListener('keydown', function(event){
+					if(event.keyCode==37) leftArrowDown = true;
+					if(event.keyCode==39) rightArrowDown = true;
+					if(event.keyCode==38) upArrowDown = true;
+				});
+
+				document.addEventListener('keyup', function(event){
+					if(event.keyCode==37) leftArrowDown = false;
+					if(event.keyCode==39) rightArrowDown = false;
+					if(event.keyCode==38) upArrowDown = false;
+				});
+			</script>
+		<!----Jquery end---->
+		
 	<head>
 		<title>Platformer</title>
 		<script src="myGameLibrary.js"></script>
 
 		<style type="text/css">
-			#gameWindow{
-				position: relative;
-				width: 800px;
-				height: 400px;
-				background-color: black;
-				overflow: hidden;
-			}
+			/*#gameWindow{*/
+			/*	position: relative;*/
+			/*	width: 800px;*/
+			/*	height: 400px;*/
+			/*	background-color: black;*/
+			/*	overflow: hidden;*/
+			/*}*/
 
-			#pc{
-				position: absolute;
-				border-radius: 10px;
-				background-color: red;
-			}
-			.platform{
-				position: absolute;
-				background-color: orange;
-				border-radius: 5px;
-			}
-			#npc_prince{
-				position: absolute;
-				border-radius: 10px;
-				background-color: purple;
-			}
-			#btnContinue{
-				position: absolute;
-				left: 350px;
-				top: 320px;
+			/*#pc{*/
+			/*	position: absolute;*/
+			/*	border-radius: 10px;*/
+			/*	background-color: red;*/
+			/*}*/
+			/*.platform{*/
+			/*	position: absolute;*/
+			/*	background-color: orange;*/
+			/*	border-radius: 5px;*/
+			/*}*/
+			/*#npc_prince{*/
+			/*	position: absolute;*/
+			/*	border-radius: 10px;*/
+			/*	background-color: purple;*/
+			/*}*/
+			/*#btnContinue{*/
+			/*	position: absolute;*/
+			/*	left: 350px;*/
+			/*	top: 320px;*/
 				
-				display: none;
+			/*	display: none;*/
 				
-				background-color: rgba(255, 255, 255, .6);
-				color: black;
+			/*	background-color: rgba(255, 255, 255, .6);*/
+			/*	color: black;*/
 				
-				padding: 20px;
-				padding-top: 10px;
-				padding-bottom: 10px;
-				border-radius: 10px;
+			/*	padding: 20px;*/
+			/*	padding-top: 10px;*/
+			/*	padding-bottom: 10px;*/
+			/*	border-radius: 10px;*/
 				
-				text-align: center;
-				font-size: 14pt;
+			/*	text-align: center;*/
+			/*	font-size: 14pt;*/
 				
-				cursor: hand;
-				cursor: pointer;
+			/*	cursor: hand;*/
+			/*	cursor: pointer;*/
 				
-				z-index: 10;
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			#btnContinue:hover{
-				background-color: rgba(255,255,255,.9);
-			}
-			.msgGameOver{
-				font-size: 50pt;
-				text-align: center;
-				color: white;
-			}
-			#lifebar{
-				position: absolute;
-				width: 400px;
-				left: 400px;
-				text-align: right;
-			}
+			/*	z-index: 10;*/
+			/*	-webkit-touch-callout: none;*/
+			/*	-webkit-user-select: none;*/
+			/*	-khtml-user-select: none;*/
+			/*	-moz-user-select: none;*/
+			/*	-ms-user-select: none;*/
+			/*	user-select: none;*/
+			/*}*/
+			/*#btnContinue:hover{*/
+			/*	background-color: rgba(255,255,255,.9);*/
+			/*}*/
+			/*.msgGameOver{*/
+			/*	font-size: 50pt;*/
+			/*	text-align: center;*/
+			/*	color: white;*/
+			/*}*/
+			/*#lifebar{*/
+			/*	position: absolute;*/
+			/*	width: 400px;*/
+			/*	left: 400px;*/
+			/*	text-align: right;*/
+			/*}*/
 		</style>
 
 		<script type="text/javascript">
@@ -222,7 +263,7 @@
 				
 				if(level == 1){
 					npc_prince.style.left = '2000px';
-					npc_prince.style.top = '340';
+					npc_prince.style.top = '340px';
 					
 					addPlatform(0,380,500,20);
 					addPlatform(150,300,100,20);
@@ -270,29 +311,33 @@
 			
 			
 
-			document.addEventListener('keydown', function(event){
-				if(event.keyCode==37) leftArrowDown = true;
-				if(event.keyCode==39) rightArrowDown = true;
-				if(event.keyCode==38) upArrowDown = true;
-			});
+			// document.addEventListener('keydown', function(event){
+			// 	if(event.keyCode==37) leftArrowDown = true;
+			// 	if(event.keyCode==39) rightArrowDown = true;
+			// 	if(event.keyCode==38) upArrowDown = true;
+			// });
 
-			document.addEventListener('keyup', function(event){
-				if(event.keyCode==37) leftArrowDown = false;
-				if(event.keyCode==39) rightArrowDown = false;
-				if(event.keyCode==38) upArrowDown = false;
-			});
+			// document.addEventListener('keyup', function(event){
+			// 	if(event.keyCode==37) leftArrowDown = false;
+			// 	if(event.keyCode==39) rightArrowDown = false;
+			// 	if(event.keyCode==38) upArrowDown = false;
+			// });
 			
 		</script>
-	</head>
-	<body onload="init()">
 
+	</head>
+	<body>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 		<div id="gameWindow">
 			<div id="pc"></div>
 			<div id = "npc_prince"></div>
 			<div id = "lifebar"></div>
-			<div id = "btnContinue" onclick="nextLevel();">Continue</div>
+			<div id = "btnContinue">Continue</div>
 		</div>
 		<div id="output"></div>
 
 	</body>
+	
+
+	
 </html>
